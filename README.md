@@ -9,7 +9,7 @@
 
 ### Instalando as dependências
 
-`yarn` ou `npm install`
+s`yarn` ou `npm install`
 
 ### Conectando ao seu banco de dados
 
