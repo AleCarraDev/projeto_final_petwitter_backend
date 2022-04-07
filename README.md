@@ -1,11 +1,5 @@
 # Petwitter API.
 
-API utilizada para o projeto [Petwitter](https://github.com/LukaVieira1/FinalProject-Petwitter-FrontEnd)
-
-Projeto em deploy: https://petwitter.vercel.app/
-
-A api consite na criação de usuarios, autenticação, criação de petweets e edição de usuarios.
-
 ## Tecnologias
 
 - [Prisma](https://www.prisma.io/)
