@@ -9,12 +9,6 @@ export default {
     preHandler: [validateRequest],
     handler: PetweetController.create,
   },
-  Delete: {
-    method: "DELETE",
-    url: "/petweets/:id",
-    preHandler: [validateRequest],
-    handler: PetweetController.del,
-  },
   GetAll: {
     method: "GET",
     url: "/petweets",

@@ -3,33 +3,18 @@ import { prisma } from "../helpers/utils.js";
 export const create = async (req, reply) => {
   try {
     const { content } = req.body;
+    console.log(typeof req.user.id);
     const petweet = await prisma.petweet.create({
       data: {
         content,
-        user_id: req.user.id,
+        user: {
+          connect: { id: req.user.id },
+        },
       },
     });
     return reply.status(201).send(petweet);
   } catch (error) {
     reply.status(500).send({ error: "Deu problema mermão" });
-  }
-};
-
-export const del = async (req, reply) => {
-  const { id } = req.params;
-  try {
-    const petweet = await prisma.petweet.delete({
-      where: {
-        id: Number(id),
-      },
-    });
-    reply.status(200).send("Petweet deletado com sucesso");
-  } catch (error) {
-    if (error.code === "P2025") {
-      reply.status(500).send({ error: "Petweet não existe" });
-    } else {
-      reply.status(500).send({ error: "Deu problema mermão" });
-    }
   }
 };
 
@@ -54,6 +39,7 @@ export const getAll = async (req, reply) => {
         createdAt: "desc",
       },
     });
+    console.log(petweets);
     return reply.send({
       petweets,
       pagination: { page, pageCount: Math.ceil(petweetsCount / take) },

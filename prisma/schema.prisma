@@ -10,15 +10,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Profile {
-  id      Int      @id @default(autoincrement()) 
-  bio String?
-  avatar_url String?
-  conver_url String?
-  user User  @relation(fields: [user_id], references: [id])
-  user_id Int @unique
-}
-
 model User {
   id      Int      @id @default(autoincrement())
   name    String  @db.VarChar(255)
@@ -26,7 +17,6 @@ model User {
   username   String   @unique @db.VarChar(255)
   password String
   petweets Petweet[]
-  profile Profile?
   createdAt DateTime @default(now()) @db.Timestamp(6)
   updatedAt DateTime @updatedAt
 }

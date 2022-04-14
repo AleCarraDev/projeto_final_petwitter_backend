@@ -32,7 +32,7 @@ export const signup = async (req, reply) => {
     }
   } catch (error) {
     console.log(error);
-    reply.status(400).send({ error: `Deu problema mermão` });
+    reply.status(400).send({ error: `Error` });
   }
 };
 

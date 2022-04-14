@@ -1,0 +1,153 @@
+{
+  "info": {
+    "_postman_id": "01c905bc-6c14-4819-af6c-03d2695e4d0e",
+    "name": "Projeto petwitter",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Signup",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \n    \"email\": \"22fimdetarde@gmail.com\",\n    \"password\": \"Carra@1992\",\n    \"username\": \"Carra1992\",\n    \"name\": \"admin\"\n    }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/signup",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["signup"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\" : \"22fimdetarde@gmail.com\",\n    \"password\" : \"Carra@1992\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["login"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Petweets",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwiZW1haWwiOiIyMmZpbWRldGFyZGVAZ21haWwuY29tIiwidXNlcm5hbWUiOiJDYXJyYTE5OTIiLCJjcmVhdGVkQXQiOiIyMDIyLTA0LTEzVDIyOjM1OjA3LjE1M1oiLCJ1cGRhdGVkQXQiOiIyMDIyLTA0LTEzVDIyOjM1OjA3LjE1M1oiLCJpYXQiOjE2NDk4ODk3MTJ9.tPnmwkE3dviPtdTcLwwGKL9UCFCMk2rzqQ06K2xa1WQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"content\" : \"miau miau\"\n    \n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/petweets",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["petweets"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Petweets",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwiZW1haWwiOiIyMmZpbWRldGFyZGVAZ21haWwuY29tIiwidXNlcm5hbWUiOiJDYXJyYTE5OTIiLCJjcmVhdGVkQXQiOiIyMDIyLTA0LTEzVDIyOjM1OjA3LjE1M1oiLCJ1cGRhdGVkQXQiOiIyMDIyLTA0LTEzVDIyOjM1OjA3LjE1M1oiLCJpYXQiOjE2NDk4ODk3MTJ9.tPnmwkE3dviPtdTcLwwGKL9UCFCMk2rzqQ06K2xa1WQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/petweets",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["petweets"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Petweets/:id",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwiZW1haWwiOiIyMmZpbWRldGFyZGVAZ21haWwuY29tIiwidXNlcm5hbWUiOiJDYXJyYTE5OTIiLCJjcmVhdGVkQXQiOiIyMDIyLTA0LTEzVDIyOjM1OjA3LjE1M1oiLCJ1cGRhdGVkQXQiOiIyMDIyLTA0LTEzVDIyOjM1OjA3LjE1M1oiLCJpYXQiOjE2NDk4ODk3MTJ9.tPnmwkE3dviPtdTcLwwGKL9UCFCMk2rzqQ06K2xa1WQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/petweets/2",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["petweets", "2"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
